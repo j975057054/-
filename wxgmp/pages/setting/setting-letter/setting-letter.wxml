@@ -1,0 +1,29 @@
+<view class="view-item">     
+    <scroll-view class="view-area" scroll-y="true">
+        <view class="letter-list flex-column">
+            <block wx:for="{{letter}}" wx:key="">
+                <view class="list-item flex-row" bindtap="tapDetail">
+                    <view><image src="../../images/header_img.jpg"></image><view class="forthwith"></view></view>
+                    <view class="flex-column list-cont">
+                        <view class="flex-row">
+                            <text>波段王者</text>
+                            <text>2015-12-31</text>
+                        </view>
+                        <view>熔断之后中短线市场以半仓操作为宜！</view>
+                    </view>
+                </view>
+            </block>
+
+            <view class="list-item flex-row" bindtap="tapDetail">
+                <view><image src="../../images/header_img.jpg"></image><view class="forthwith"></view></view>
+                <view class="flex-column list-cont">
+                    <view class="flex-row">
+                        <text>波段王者</text>
+                        <text>2015-12-31</text>
+                    </view>
+                    <view>熔断之后中短线市场以半仓操作为宜！</view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

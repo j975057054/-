@@ -1,0 +1,64 @@
+<view class="container flex-column">
+    <swiper class="post-swiper" circular="true" autoplay="true" indicator-dots="true" indicator-dots="true">
+        <image class="bg" src="../images/default_ban.png"></image>
+        <block wx:for="{{swiperData}}" wx:key="imgSrc">
+            <swiper-item>
+                <image src="{{item.img}}"></image>
+            </swiper-item>
+        </block>    
+    </swiper>
+  <!--实时解盘-->
+  <view class="plate">
+      <view class="headline flex-row">
+          <text class="hd-title">实时解盘</text>
+          <view class="hd-more flex-row">
+            <text bindtap="liveMore">更多</text>          
+          </view>
+      </view>
+      <view class="hd-cont flex-row">
+        <view class="flex-column" bindtap="liveMore">
+            <view class="plate-img">
+                <image class="bg" src="../images/default_live.png"></image>
+                <image src="{{videoData.img}}"></image>
+                <text>{{videoData.total_count}}人在线</text>
+            </view>           
+            <text>{{videoData.title}}</text>
+        </view>
+        <view class="flex-column" bindtap="textMore"> 
+            <view class="plate-img">
+                <image class="bg" src="../images/default_live.png"></image>
+                <image src="{{textData.img}}"></image>
+                <text>{{textData.total_count}}人在线</text>
+            </view>  
+            <text>{{textData.title}}</text>
+        </view>
+      </view>
+  </view>
+  <!--内参-->
+  <view class="plate mgt18">
+      <view class="headline flex-row">
+          <text class="hd-title">内参</text>
+          <view class="hd-more flex-row">
+            <text bindtap="referMore">更多</text>      
+          </view>
+      </view>
+      <view class="refer-list flex-column">
+         <block wx:for="{{referData}}" wx:key="title">
+            <view bindtap="onPostTap" class="refer-item flex-row" data-level="{{item.level}}" data-title="{{item.title}}" data-post-id="{{item.reference_id}}">
+                <view class="refer-img">
+                    <image src="../images/refer_{{item.level==2?'vip':'free'}}.jpg"></image>
+                </view> 
+                <view class="refer-text flex-column">
+                    <text>{{item.title}}</text>
+                    <text class="refer-time">{{item.timesto}}</text>
+                </view> 
+            </view>
+         </block>
+      </view>
+  </view>
+  <!--无网络-->
+  <view hidden="{{noNet==false}}" bindtap="reload" class="no-network flex-column {{refresh==true?'dbn':''}}" style="height:{{winHeight*2-402}}rpx">
+    <view><image src="../images/mesh_refresh.png"></image></view>
+    <text>点击屏幕，重新加载网络</text>
+  </view>
+</view>

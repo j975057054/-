@@ -1,0 +1,16 @@
+<import src="../../../wxParse/wxParse.wxml"/> 
+<view class="container" hidden="{{postData.title==unfined}}">
+    <text class="title">{{postData.title}}</text>
+    <view class="time-infor flex-row">
+       <text>{{postData.timesto}}</text>
+       <text class="person">{{postData.click_count}}人浏览</text>
+       <image wx:if="{{postData.level>1}}" src="../../images/refer_vip_icon.png"></image>
+    </view>
+    <view class="content">{{postData.content}}</view>
+    <view class="content"><template is="wxParse" data="{{wxParseData:insertData.nodes}}" /></view>
+</view>
+<!--无网络-->
+  <view hidden="{{noNet==false}}" bindtap="reload" class="no-network flex-column" >
+    <view><image src="../../images/mesh_refresh.png"></image></view>
+    <text>点击屏幕，重新加载网络</text>
+  </view>

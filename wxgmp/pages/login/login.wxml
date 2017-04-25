@@ -1,0 +1,32 @@
+<view class="container">
+    <view class="logo flex-column">
+        <image src="../images/logo.png"></image>
+        <text>股木派</text>
+    </view>
+    <form class="flex-column">
+        <view class="int flex-row mgb40">
+            <input name="user" bindinput="inputUser" value="{{user}}" placeholder-class="color-bbb" placeholder="用户名/手机号" />
+        </view>
+        <view class="int flex-row">
+            <input name="pwd" bindinput="inputPwd" value="{{pwd}}" password="true" placeholder-class="color-bbb" placeholder="密码" />
+        </view>
+        <view class="remember flex-row">
+            <checkbox-group bindchange="checkboxRem" data-checks='{{checked}}'>
+                <label><checkbox checked="{{checked}}" />记住账号密码</label>  
+            </checkbox-group>
+            <text class="promptly" bindtap="tapRegister">立即注册</text>   
+        </view>
+        <view class="btn-area">
+            <button bindtap="loginVerify" hover-class="hover-bg" formType="submit">登录</button>
+        </view>
+    </form>
+    <view class="third-party flex-column">
+        <view class="line"></view>
+        <view class="third-title flex-column"><text>第三方登录</text></view>           
+        <view class="third-cont flex-row">
+            <view bindtap="wxLogin"><image src="../images/third-icon_01.png"></image></view>
+            <view><image src="../images/third-icon_02.png"></image></view>
+            <view><image src="../images/third-icon_03.png"></image></view>
+        </view>
+    </view>
+</view>

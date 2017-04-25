@@ -1,0 +1,132 @@
+.view-area{
+   height: 100%;
+   z-index: 10;
+   position: relative;
+}
+.letter-list{background-color: #fff;}
+.list-item{align-items: center;}
+.list-item:active{background-color: #f0f0f0;}
+.list-item>view{position: relative;}
+.list-item image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 0 15px 0 10px;
+}
+.list-cont{width: 100%;border-bottom: 1px solid #e3e3e3;padding: 12px 0;}
+.list-cont>view:nth-child(1){
+    align-items: center;
+    justify-content: space-between;
+}
+.list-cont>view:nth-child(2){
+    color:#848484;
+    font-size: 14px;
+    margin-top: 9px;
+    height: 16px;
+    overflow: hidden;
+}
+.list-cont text:nth-child(1){
+    font-size: 16px;
+    color:#444;
+}
+.list-cont text:nth-child(2){
+    font-size: 12px;
+    color:#999;
+    padding-right: 12px;
+}
+.forthwith{
+    position: absolute;
+    left: 50px;
+    top:0;
+    width: 20rpx;
+    height: 20rpx;
+    background-color: #d33d3e;
+    border-radius: 50%;
+}
+.dbn{display: none;}
+/*私信详细*/
+.time{align-items: center}
+.time text{
+    font-size: 10px;
+    color:#fff;
+    background-color: #cecece;
+    border-radius: 10rpx;
+    padding: 0 4px;
+    line-height: 20px;
+    margin: 15px 0 0;
+}
+.letter-table image{
+    width: 39px;
+    height: 39px;
+    border-radius: 3px;
+    margin: 0 14px 0 10px;
+}
+.th-talk,.my-talk{margin: 10px 0;position: relative}
+.th-talk{margin-right: 63px;}
+.my-talk{flex-direction: row-reverse;margin-left: 63px;}
+.letter-cont{
+    font-size: 15px;
+    color:#444;
+    line-height: 26px;
+    background-color: #fff;
+    padding: 12px 5px 10px 8px;
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+}
+.corner{
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border:1px solid #e3e3e3;
+    border-width: 0 0 1px 1px;
+    position: absolute;
+    left: 60px;
+    top: 17px;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}
+.my-talk .corner{
+    border-width: 1px 1px 0 0;
+    left: auto;
+    right:60px;
+}
+/*评论框*/
+.comment-box{
+  position: absolute;
+  left: 0;
+  bottom:0;
+  width: 100%;
+  z-index: 999;
+  background-color:#f6f5f5;
+  height: 43px;
+  padding: 0 24rpx;
+  align-items: center;
+  border-top:1px solid #e3e3e3;
+}
+.comment-box image{
+  width: 26px;
+  height: 26px;
+  margin-top: 3px;
+}
+.comment-box>view:nth-child(2){background-color: #fff;margin: 0 20rpx;}
+.comment-box input{
+  width: 468rpx;
+  height: 28px;
+  padding: 0 20rpx;
+  border:1px solid #aeadad;
+  border-radius: 4px;
+}
+.comment-box button{
+  margin: 0;
+  padding: 0;
+  width: 100rpx;
+  height: 30px;
+  line-height: 30px;
+  font-size: 15px;
+  color: #fff;
+  background-color: #d33d3e;
+}
+.comment-box .hover-bg{
+    background-color: #bf2526;
+    color: #fed9d9;
+}

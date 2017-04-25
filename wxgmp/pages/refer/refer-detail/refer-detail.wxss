@@ -1,0 +1,50 @@
+@import "../../../wxParse/wxParse.wxss";
+page{background-color: #fff}
+image{width: auto;height:auto;}
+.title{
+    text-align: center;
+    font-size: 34rpx;
+    margin: 36rpx 0 16rpx;
+}
+.time-infor{
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.time-infor text{
+    color: #7e7f81;
+    font-size: 12px;
+}
+.person{
+    margin: 0 3px 0 12px;
+}
+.time-infor image{
+    width: 16.5px;
+    height: 9px;
+}
+.content{
+    color:#444;
+    line-height: 26px;
+    padding: 0 15px 25px;
+    word-break:break-all;
+}
+/*无网络*/
+.no-network{
+    font-size: 14px;
+    color: #b3b3b3;
+    width: 100%;
+    height: 100%;
+    background-color: #f0eff4;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+.no-network image{
+    width: 65.5px;
+    height: 45px;
+    margin-bottom: 6px;
+}
+.dbn{display: none;}

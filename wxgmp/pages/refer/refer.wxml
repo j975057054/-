@@ -1,0 +1,18 @@
+<view class="refer-list flex-column">
+    <block wx:for="{{referData}}" wx:key="reference_id">
+        <view bindtap="onPostTap" class="refer-item flex-row" data-level="{{item.level}}" data-title="{{item.title}}" data-post-id="{{item.reference_id}}">
+            <view class="refer-img">
+                <image src="../images/refer_{{item.level==2?'vip':'free'}}.jpg"></image>
+            </view> 
+            <view class="refer-text flex-column">
+                <text>{{item.title}}</text>
+                <text class="refer-time">{{item.timesto}}</text>
+            </view> 
+        </view>
+    </block>
+</view>
+<!--无网络-->
+  <view hidden="{{noNet==false}}" bindtap="reload" class="no-network flex-column {{refresh==true?'dbn':''}}" >
+    <view><image src="../images/mesh_refresh.png"></image></view>
+    <text>点击屏幕，重新加载网络</text>
+  </view>

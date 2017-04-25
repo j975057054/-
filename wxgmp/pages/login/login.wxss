@@ -1,0 +1,79 @@
+page{background-color: #fff}
+.container{padding:0 24rpx;}
+.logo{
+    align-items: center;
+    font-size: 34rpx;
+    padding:130rpx 0 95rpx;
+}
+.logo image{
+    width: 128rpx;
+    height: 128rpx;
+}
+.logo text{margin-top: 8rpx;}
+.int{align-items: center;}
+.int input{
+    border: 2rpx solid #dbdada;
+    padding: 0 20rpx;
+    border-radius: 8rpx;
+    font-size: 30rpx;
+    height: 86rpx;
+    line-height: 86rpx;
+    width: 100%;
+}
+.color-bbb{color:#bbb}
+.mgb40{margin-bottom: 40rpx;}
+.remember{margin: 26rpx 0 50rpx;justify-content: space-between;}
+.remember checkbox{
+    vertical-align: 5rpx;
+}
+.remember label{color:#999;font-size: 26rpx;}
+.btn-area button{
+    color: #fff;
+    font-size: 34rpx;
+    background-color: #d33d3e;
+    border-radius: 42.5rpx;
+    border: none;
+    line-height: 86rpx;
+}
+.btn-area .hover-bg{
+    background-color: #bf2526;
+    color: #fed9d9;
+}
+.relevance{
+    align-items: center;
+    font-size: 26rpx;
+    color:#b3b3b3;
+    padding: 152rpx 0 50rpx;
+}
+.promptly{
+    font-size: 32rpx;
+    color:#d33d3e;
+    padding-top: 15rpx;
+    display: block;
+}
+.third-party{
+    font-size: 28rpx;
+    color:#b3b3b3;
+    position: relative;
+}
+.third-party .line{
+    position: absolute;
+    left:0;
+    top:115rpx;
+    width:100%;
+    height:1px;
+    background-color:#e3e3e3; 
+}
+.third-title{
+    padding: 100rpx 0 60rpx; 
+    align-items: center;   
+    z-index: 99;
+}
+.third-title text{padding:0 38rpx;background-color: #fff;}
+.third-party image{
+    width: 72rpx;
+    height: 72rpx;
+}
+.third-cont{justify-content: space-around;padding-bottom: 10px;}
+.hint{font-size: 24rpx;color:#bbb;margin: 20rpx 0 100rpx;display: block;}
+.login-third{margin-top: 50rpx;}
