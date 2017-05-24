@@ -1,0 +1,62 @@
+{
+  "pages":[ 
+    
+    "pages/index/index",
+    "pages/video-live/video-live",
+    "pages/text-live/text-live",     
+    "pages/refer/refer",
+    "pages/setting/setting",
+    "pages/setting/setting-relief/setting-relief",
+    "pages/setting/setting-refer/setting-refer",
+    "pages/setting/setting-opinion/setting-opinion",
+    "pages/refer/refer-detail/refer-detail",
+    "pages/setting/setting-letter/setting-letter",
+    "pages/setting/letter-detail/letter-detail",
+    "pages/login/login",
+    "pages/login/login-third/login-third",
+    "pages/register/register",
+    "pages/register/register-next/register-next"
+          
+  ],
+  "window":{
+    "backgroundColor": "#f0eff4",
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#d33d3e",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "color":"#adacac",
+    "selectedColor":"#d33d3e",
+    "backgroundColor":"#fff",
+    "borderStyle":"",
+    "position":"bottom",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath":"pages/images/icon1_n.png",
+      "selectedIconPath":"pages/images/icon1_h.png"
+    }, {
+      "pagePath": "pages/video-live/video-live",
+      "text": "股票解盘",
+      "iconPath":"pages/images/icon2_n.png",
+      "selectedIconPath":"pages/images/icon2_h.png"
+    }, {
+      "pagePath": "pages/text-live/text-live",
+      "text": "红木解盘",
+      "iconPath":"pages/images/icon3_n.png",
+      "selectedIconPath":"pages/images/icon3_h.png"
+    }, {
+      "pagePath": "pages/refer/refer",
+      "text": "参考消息",
+      "iconPath":"pages/images/icon4_n.png",
+      "selectedIconPath":"pages/images/icon4_h.png"
+    }, {
+      "pagePath": "pages/setting/setting",
+      "text": "我的",
+      "iconPath":"pages/images/icon5_n.png",
+      "selectedIconPath":"pages/images/icon5_h.png"
+    }]
+  }
+}

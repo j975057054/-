@@ -1,0 +1,94 @@
+<view class="refer-list flex-column">
+        <view class="refer-item flex-row" bindtap="onPostTap" data-post-id="0">
+            <view class="refer-img">
+              <image src="../images/refer_free.jpg"></image>
+            </view>
+            <view class="refer-text flex-column">
+                <text>套现3609亿居历史第二高39人实现小目标</text>
+                <text class="refer-time">2017-01-28  17:20</text>
+            </view> 
+        </view>
+        <view class="refer-item flex-row" bindtap="onPostTap" data-post-id="1">
+            <view class="refer-img">
+              <image src="../images/refer_vip.jpg"></image>
+            </view>
+            <view class="refer-text flex-column">
+                <text>套现3609亿居历史第二高39人实现小目标</text>
+                <text class="refer-time">2017-01-28  17:20</text>
+            </view> 
+        </view>
+
+        <view class="refer-item flex-row" bindtap="onPostTap" data-post-id="2">
+            <view class="refer-img">
+              <image src="../images/refer_free.jpg"></image>
+            </view>
+            <view class="refer-text flex-column">
+                <text>套现3609亿居历史第二高39人实现小目标</text>
+                <text class="refer-time">2017-01-28  17:20</text>
+            </view> 
+        </view>
+        <view class="refer-item flex-row" bindtap="onPostTap" data-post-id="3">
+            <view class="refer-img">
+              <image src="../images/refer_vip.jpg"></image>
+            </view>
+            <view class="refer-text flex-column">
+                <text>套现3609亿居历史第二高39人实现小目标</text>
+                <text class="refer-time">2017-01-28  17:20</text>
+            </view> 
+        </view>
+        <view class="refer-item flex-row" bindtap="onPostTap" data-post-id="4">
+            <view class="refer-img">
+              <image src="../images/refer_vip.jpg"></image>
+            </view>
+            <view class="refer-text flex-column">
+                <text>套现3609亿居历史第二高39人实现小目标</text>
+                <text class="refer-time">2017-01-28  17:20</text>
+            </view> 
+        </view>
+        <view class="refer-item flex-row" bindtap="onPostTap" data-post-id="5">
+            <view class="refer-img">
+              <image src="../images/refer_free.jpg"></image>
+            </view>
+            <view class="refer-text flex-column">
+                <text>套现3609亿居历史第二高39人实现小目标</text>
+                <text class="refer-time">2017-01-28  17:20</text>
+            </view> 
+        </view>
+        <view class="refer-item flex-row" bindtap="onPostTap" data-post-id="6">
+            <view class="refer-img">
+              <image src="../images/refer_vip.jpg"></image>
+            </view>
+            <view class="refer-text flex-column">
+                <text>套现3609亿居历史第二高39人实现小目标</text>
+                <text class="refer-time">2017-01-28  17:20</text>
+            </view> 
+        </view>
+        <view class="refer-item flex-row" bindtap="onPostTap" data-post-id="7">
+            <view class="refer-img">
+              <image src="../images/refer_vip.jpg"></image>
+            </view>
+            <view class="refer-text flex-column">
+                <text>套现3609亿居历史第二高39人实现小目标</text>
+                <text class="refer-time">2017-01-28  17:20</text>
+            </view> 
+        </view>
+        <view class="refer-item flex-row" bindtap="onPostTap" data-post-id="8">
+            <view class="refer-img">
+              <image src="../images/refer_free.jpg"></image>
+            </view>
+            <view class="refer-text flex-column">
+                <text>套现3609亿居历史第二高39人实现小目标</text>
+                <text class="refer-time">2017-01-28  17:20</text>
+            </view> 
+        </view>
+        <view class="refer-item flex-row" bindtap="onPostTap" data-post-id="9">
+            <view class="refer-img">
+              <image src="../images/refer_free.jpg"></image>
+            </view>
+            <view class="refer-text flex-column">
+                <text>套现3609亿居历史第二高39人实现小目标</text>
+                <text class="refer-time">2017-01-28  17:20</text>
+            </view> 
+        </view>
+
+</view>

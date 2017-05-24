@@ -1,0 +1,40 @@
+<view class="container">
+    <navigator url="../login/login" hover-class="none" wx:if="{{userLogin==false}}">
+        <view class="header flex-column">
+            <image src="../images/header_img.jpg"></image>
+            <text>登录/注册</text>
+        </view>
+    </navigator> 
+    <view class="header flex-column" wx:elif="{{userLogin==true}}">
+        <view bindtap="changeImg"><image src="{{headImg}}"></image></view>
+        <text>{{nickname}}</text>
+    </view>
+    <navigator url="setting-refer/setting-refer" wx:if="{{userLevel==true}}">
+        <view class="set-item flex-row">
+            <text>创建参考消息</text>
+            <image src="../images/set_refer.png"></image>
+        </view>
+    </navigator>
+    <navigator class="mgb24" url="setting-letter/setting-letter" wx:if="{{userLogin==true}}">
+        <view class="set-item flex-row">
+            <text>我的私信</text>
+            <view class="forthwith"></view>
+        </view>
+    </navigator>     
+    <view class="set-cont flex-column">
+        <navigator url="setting-relief/setting-relief">
+            <view class="set-item flex-row set-relief">
+                <text>免责声明</text>
+            </view>
+        </navigator>
+        <navigator url="setting-opinion/setting-opinion">
+            <view class="set-item flex-row set-refer">
+                <text>投诉与建议</text>
+            </view>
+        </navigator>
+        <view bindtap="actionSheetTap" class="set-item flex-row set-phone">
+            <text >唯一官方电话</text>
+        </view>     
+    </view>
+    <view bindtap="btnExit" class="set-item flex-column set-exit" wx:if="{{userLogin==true}}">退出</view>
+</view>

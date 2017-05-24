@@ -1,0 +1,29 @@
+@import "../login/login.wxss";
+.container{margin-top: 50rpx;}
+.btn-area{margin-top: 60rpx;}
+.relevance{padding-top: 564rpx}
+.have{padding-left: 10rpx;}
+.verification{align-content: space-between;align-items: center;}
+.verification input{
+    max-width: 430rpx;
+}
+.verification button{
+    font-size: 30rpx;
+    color: #bbbbbb;
+    padding:0;
+    width: 210rpx;
+    line-height: 86rpx;
+    background-color: #fff;
+    border: 2rpx solid #dbdada;
+    margin-right:0;
+    border-radius: 8rpx;
+    white-space: nowrap;
+}
+button:after{
+    border: none;
+}
+button.code-change:active{
+    border-color: #d33d3e;
+    color: #d33d3e;
+}
+.color-red{color:#d33d3e;}

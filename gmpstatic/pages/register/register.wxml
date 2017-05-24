@@ -1,0 +1,19 @@
+<view class="container">
+    <form class="flex-column" bindsubmit="">
+        <view class="int flex-row mgb40">
+            <input type="number" bindinput="inputIphone" maxlength="11" placeholder-class="color-bbb" placeholder="手机号" />
+        </view>
+        <view class="int verification flex-row">
+            <input type="text" bindinput="inputCode" placeholder-class="color-bbb" placeholder="验证码" />
+            <button class="code-change" bindtap="sendCode" hidden="{{sended}}">获取验证码</button>
+            <button hidden="{{!sended}}">{{cont}}s后重新获取</button>
+        </view>
+        <view class="btn-area">
+            <button hover-class="hover-bg" formType="submit" bindtap="tapNext">下一步</button>
+        </view>
+    </form>
+    <view class="relevance flex-column">
+        <text class="have">已有账号？</text>
+        <text class="promptly" bindtap="tapLogin">立即登录</text>     
+    </view>
+</view>

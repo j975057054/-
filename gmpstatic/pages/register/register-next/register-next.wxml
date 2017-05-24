@@ -1,0 +1,25 @@
+<view class="container">
+    <form class="flex-column" bindsubmit="">
+        <view class="int flex-row mgb40">
+            <input type="text" bindinput="inputName" placeholder-class="color-bbb" placeholder="用户名" />
+        </view>
+        <view class="int flex-row mgb40">
+            <input type="text" bindinput="inputPwd" password="true" placeholder-class="color-bbb" placeholder="设置密码" />
+        </view>
+        <view class="int flex-row">
+            <input type="text" bindinput="pwdSure" password="true" placeholder-class="color-bbb" placeholder="确认密码" />
+        </view>
+        <view class="remember flex-row">
+            <checkbox-group bindchange="checkboxRem" data-checks="{{checked}}">
+                <label><checkbox checked="{{checked}}" />同意<text class="color-red">《股木派用户协议》</text></label>  
+            </checkbox-group>        
+        </view>
+        <view class="btn-area">
+            <button hover-class="hover-bg" formType="submit" bindtap="signUp">立即注册</button>
+        </view>
+    </form>
+    <view class="relevance flex-column">
+        <text class="have">已有账号？</text>
+        <text class="promptly"  bindtap="tapLogin">立即登录</text>    
+    </view>
+</view>

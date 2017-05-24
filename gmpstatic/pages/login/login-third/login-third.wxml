@@ -1,0 +1,11 @@
+<view class="container">
+    <form class="flex-column login-third" bindsubmit="">
+        <view class="int flex-row">
+            <input type="text" placeholder-class="color-bbb" placeholder="用户名/手机号" />
+        </view>
+        <text class="hint">您的昵称重复，用户名需唯一，请您重新设置。</text>    
+        <view class="btn-area">
+            <button hover-class="hover-bg" formType="submit">确定</button>
+        </view>
+    </form>
+</view>

@@ -1,0 +1,88 @@
+.container{color:#444;overflow: hidden}
+.header{
+    align-items: center;
+    background-color: #d33d3e;
+    color:#fff;
+    font-size: 32rpx;
+    padding:64rpx 0 60rpx;
+}
+.header image{
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    margin-bottom:20rpx;
+}
+.header view{
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: url(../images/header_img.jpg) 0 0 no-repeat;
+    background-size:62px; 
+    background-color: #ccc;
+    margin-bottom:20rpx;
+}
+.mgb24{ margin-bottom: 24rpx;margin-top: -1px;}
+.set-item{
+    padding: 0 12px;
+    background-color: #fff;
+    border-top: 2rpx solid #e3e3e3;
+    border-bottom: 2rpx solid #e3e3e3;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 84rpx;
+}
+.set-item image{
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 45rpx;
+}
+.set-item text:after{
+    content: " ";
+    display: inline-block;
+    height: 20rpx;
+    width: 20rpx;
+    border-width: 2rpx 2rpx 0 0;
+    border-color: #979797;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: absolute;
+    right:24rpx;
+    top:28rpx;
+}
+.set-cont{
+    border-top: 2rpx solid #e3e3e3;
+    border-bottom: 2rpx solid #e3e3e3;
+}
+.set-relief,.set-refer,.set-phone{border-width:0;position: relative}
+.set-refer:before,.set-refer:after{
+    content: '';
+    height: 2rpx;
+    width: 100%;
+    background-color: #e3e3e3;
+    margin-left: 24rpx;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top:0;  
+}
+.set-refer:after{top:auto;bottom:1rpx;}
+.set-exit{
+    margin-top: 20rpx;
+    align-items: center;
+    line-height: 84rpx;
+    color:#d33d3e;
+    font-size: 34rpx;
+}
+.set-exit:active{background-color: #e9e9e9;}
+.forthwith{
+    position: absolute;
+    left: 73px;
+    top:14rpx;
+    width: 20rpx;
+    height: 20rpx;
+    background-color: #d33d3e;
+    border-radius: 50%;
+}
+.dbn{display: none;}

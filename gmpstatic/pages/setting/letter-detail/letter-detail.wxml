@@ -1,0 +1,23 @@
+<view class="container">
+    <scroll-view  class="view-area" style="height:{{winHeight-43}}px" scroll-y="true">
+        <view class="letter-table flex-column">
+            <view class="time flex-column"><text>星期一 下午14:00</text></view>
+            <view class="th-talk flex-row">
+                <view><image src="../../images/header_img.jpg"></image></view>
+                <view class="corner"></view>
+                <view class="letter-cont">飘然而至说：宁波银行，老师？刘长江回复：可以考虑持有。</view>
+            </view>
+            <view class="my-talk flex-row">
+                <view><image src="../../images/header_img.jpg"></image></view>
+                <view class="corner"></view>
+                <view class="letter-cont">刘长江16.0有支撑，可以考虑可以考虑持。</view>
+            </view>
+        </view>
+    </scroll-view>
+    <!--评论框-->
+    <view class="comment-box flex-row" >
+        <view><image src="../../images/emotiona.png"></image></view>
+        <view><input type="emoji" placeholder="互动起来吧" /></view>
+        <button hover-class="hover-bg" formType="submit">发送</button>
+    </view>
+</view>

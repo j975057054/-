@@ -1,0 +1,459 @@
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class="flex-column">
+    <view class="video-btn {{switchState==false?'dbn':''}}">
+        <video id="videoA" objectFit="fill"></video>
+    </view>
+    <view class="switch-off {{switchState==false?'dbn':''}}" bindtap="switchOff"><image src="../images/switch_off.png"></image></view>
+    <view class="switch-on {{switchState==false?'':'dbn'}} {{btnShow==true?'opa':''}}" bindtap="switchOn"><image src="../images/switch_on.png"></image></view>
+
+    <view class="swiper-tab flex-row">
+        <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">观点<view></view></view>
+        <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">互动<view></view></view>
+        <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">{{user==0? '团队老师':'喊单'}}<view></view></view>
+        <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">往期回顾<view></view></view>
+    </view>
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{switchState==false?winHeight-42:winHeight-42-190*winWidth/375}}px" bindchange="bindChange">
+        <!--观点-->
+        <swiper-item>
+            <view class="view-item"> 
+                <view class="refesh {{refesh==false?'height':''}}" >下拉刷新</view>    
+                <scroll-view class="view-area" scroll-y="true" style="height:{{user==0?winHeight-42-190*poitWidth/375:winHeight-42-43-190*poitWidth/375}}px" upper-threshold="0" lower-threshold="0" bindscrolltolower="loadMore1" bindscrolltoupper="refesh1" scroll-top="{{switchState==false?winHeight-42:winHeight-42-190*winWidth/375}}">
+                    <view class="table-view viewpoint">
+                        <view class="table-item flex-column">       
+                            <view class="item-cont flex-row">
+                                <view>
+                                    <image src="../images/header_img.jpg"></image>
+                                </view>
+                                <view class="flex-row hd-cont"><text>散户哨兵</text><text>15:38</text></view>               
+                            </view>
+                            <view class="cont">飘然而至说：宁波银行怎么操作，老师小目标”方法哪家强？A股减持赛蓝翔。受到和管理层对减革将在2017年进入“突破”阶段，国企混改.</view>
+                        </view>
+
+                        <view class="table-item flex-column">       
+                            <view class="item-cont flex-row">
+                                <view>
+                                    <image src="../images/header_img.jpg"></image>
+                                </view>
+                                <view class="flex-row hd-cont"><text>散户哨兵</text><text>15:38</text></view>               
+                            </view>
+                            <view class="cont">
+                                <view class="text-table flex-column">
+                                    <view>奥氏黄檀</view>
+                                    <view class="flex-row">
+                                        <view class="flex-row"><text>买入卖出</text><text class="color-green">卖出建仓</text></view>
+                                        <view class="flex-row"><text>止盈</text><text>756</text></view>
+                                    </view>
+                                    <view class="flex-row">
+                                        <view class="flex-row"><text>委托类型</text><text>市价</text></view>
+                                        <view class="flex-row"><text>止损</text><text>756</text></view>
+                                    </view>
+                                    <view class="flex-row">
+                                        <view class="flex-row"><text>点位</text><text>市价</text></view>
+                                        <view class="flex-row"><text>备注</text><text>空单</text></view>
+                                    </view>
+                                    <view class="flex-row">
+                                        <view class="flex-row"><text>仓位</text><text>市价</text></view>
+                                        <view class="flex-row"><text>平仓详情</text><text>查看平仓</text></view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view> 
+
+                        <view class="table-item flex-column">       
+                            <view class="item-cont flex-row">
+                                <view>
+                                    <image src="../images/header_img.jpg"></image>
+                                </view>
+                                <view class="flex-row hd-cont"><text>散户哨兵</text><text>15:38</text></view>               
+                            </view>
+                            <view class="cont">飘然而至说：宁波银行怎么操作，老师小目标”方法哪家强？A股减持赛蓝翔。受到和管理层对减革将在2017年进入“突破”阶段，国企混改.<image src="../images/actual_img_01.jpg"></image><template is="wxParse" data="{{wxParseData:insertData.nodes}}" /></view>
+                        </view>
+                        <view class="table-item flex-column">       
+                            <view class="item-cont flex-row">
+                                <view> 
+                                    <image src="../images/header_img.jpg"></image>
+                                </view>
+                                <view class="flex-row hd-cont"><text>散户哨兵</text><text>15:38</text></view>               
+                            </view>
+                            <view class="cont">飘然而至说：宁波银行怎么操作，老师小目标”方法哪家强？A股减持赛蓝翔。受到和管理层对减革将在2017年进入“突破”阶段，国企混改.</view>
+                        </view>
+                        <view class="table-item flex-column">       
+                            <view class="item-cont flex-row">
+                                <view>
+                                    <image src="../images/header_img.jpg"></image>
+                                </view>
+                                <view class="flex-row hd-cont"><text>散户哨兵</text><text>15:38</text></view>               
+                            </view>
+                            <view class="cont">飘然而至说：宁波银行怎么操作，老师小目标”方法哪家强？A股减持赛蓝翔。受到和管理层对减革将在2017年进入“突破”阶段，国企混改.</view>
+                        </view>
+                    </view>
+                    <!--暂无数据-->
+                    <view wx:if="{{noData==true}}" class="no-data flex-column">
+                        <view><image src="../images/no_data_01.png"></image></view>
+                        <text>暂无数据</text>
+                    </view>
+                    <view class="refesh" hidden="{{loadMore==false}}" >下拉加载</view>
+                </scroll-view>
+                
+                <!--评论框-->
+                <view class="comment-box flex-row {{user==0?'dbn':''}}" >
+                    <view><image src="../images/emotiona.png"></image></view>
+                    <view><input bindinput="intPoint" type="emoji" placeholder="互动起来吧" /></view>
+                    <button bindtap="sendPoint" hover-class="hover-bg" formType="submit">发送</button>
+                </view>
+            </view>
+        </swiper-item>
+        <!--互动-->
+        <swiper-item>
+            <view class="view-item">
+                <view class="refesh {{refesh==false?'height':''}}" >下拉刷新</view> 
+                <scroll-view class="view-area" scroll-y="true" style="height:{{switchState==false?winHeight-42-43:winHeight-42-43-190*winWidth/375}}px" upper-threshold="0" lower-threshold="0" bindscrolltolower="loadMore" bindscrolltoupper="refesh" scroll-top="1527">
+                    <view class="table-view flex-column interact">
+                        <block wx:for="{{interactList}}" wx:key="nickname">
+                            <view class="table-item flex-row">
+                                <!--用户互动-->
+                                <view>
+                                    <view class="hd-bg">
+                                        <image src="../images/header_img1.jpg"></image>
+                                    </view>
+                                    <view class="item-cont flex-column">
+                                        <view class="flex-row hd-cont"><text>{{interactList.nickname}}</text><text>15:38</text></view>
+                                        <text class="cont">{{interactList.content}}</text>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="discuss flex-row">
+                                <!--回复操作-->
+                                <view class="reply-menu flex-row {{replyId==0?'':'dbn'}}">               
+                                    <view class="flex-row"><image src="../images/icon_stop.png"></image><text>禁言</text></view>
+                                    <view class="flex-row"><image src="../images/icon_reply.png"></image><text>回复</text></view>
+                                    <view class="flex-row" bindtap="replyDel" data-reply-id="0"><image src="../images/icon_delete.png"></image><text>删除</text></view>
+                                </view>
+                                <!--评论操作-->
+                                <view bindtap="replyMenu" data-menu-state="{{menuState}}" data-reply-id="0"><image src="../images/icon_discuss.png"></image></view>
+                            </view>
+                            <view class="line"></view>
+                        </block>
+
+                        <view class="table-item flex-row">
+                            <view class="hd-bg">
+                                <image src="../images/header_img.jpg"></image>
+                            </view>
+                            <view class="item-cont flex-column">
+                                <view class="flex-row hd-cont"><text>散户哨兵</text><text>15:38</text></view>
+                                <text class="cont">飘然而至说：宁波银行怎么操作，老师“小目标”方法哪家强？A股减持赛蓝翔。受到和管理层对减</text>
+                            </view>
+                        </view>
+                        <view class="discuss flex-row">
+                            <!--回复操作-->
+                            <view class="reply-menu flex-row {{replyId==0?'':'dbn'}}">               
+                                <view class="flex-row"><image src="../images/icon_stop.png"></image><text>禁言</text></view>
+                                <view class="flex-row"><image src="../images/icon_reply.png"></image><text>回复</text></view>
+                                <view class="flex-row" bindtap="replyDel" data-reply-id="0"><image src="../images/icon_delete.png"></image><text>删除</text></view>
+                            </view>
+                            <!--评论操作-->
+                            <view bindtap="replyMenu" data-menu-state="{{menuState}}" data-reply-id="0"><image src="../images/icon_discuss.png"></image></view>
+                        </view>
+                        <view class="line"></view>
+
+                        <view class="table-item flex-column">
+                            <!--问答-->
+                            <view class="ques flex-row">
+                                <view><image src="../images/icon_ques.png"></image></view>
+                                <view class="flex-column item-cont">
+                                    <view class="flex-row hd-cont"><text>满江红</text><text>15:38</text></view>
+                                    <text class="cont">中国普惠金融的践行者，为中小投资者</text>
+                                </view>
+                            </view>    
+                            <!--答-->
+                            <view class="answer flex-row">
+                                <view><image src="../images/icon_answer.png"></image></view>
+                                <view class="flex-column item-cont">
+                                    <view class="flex-row hd-cont"><text>散户哨兵</text><text>15:38</text></view>
+                                    <text class="cont">中国普惠金融的践行者，为中小投资者</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="discuss flex-row">
+                            <!--回复操作-->
+                            <view class="reply-menu flex-row {{replyId==1?'':'dbn'}}">               
+                                <view class="flex-row"><image src="../images/icon_stop.png"></image><text>禁言</text></view>
+                                <view class="flex-row"><image src="../images/icon_reply.png"></image><text>回复</text></view>
+                                <view class="flex-row"><image src="../images/icon_delete.png"></image><text>删除</text></view>
+                            </view>
+                            <!--评论操作-->
+                            <view bindtap="replyMenu" menuState="{{menuState}}" data-reply-id="1"><image src="../images/icon_discuss.png"></image></view>
+                        </view>
+                        <view class="line"></view>
+                        
+                        <view class="table-item flex-row">
+                            <view class="hd-bg">
+                                <image src="../images/header_img.jpg"></image>
+                            </view>
+                            <view class="item-cont flex-column">
+                                <view class="flex-row hd-cont"><text>散户哨兵</text><text>15:38</text></view>
+                                <text class="cont">飘然而至说：宁波银行怎么操作，老师“小目标”方法哪家强？A股减持赛蓝翔。受到和管理层对减</text>
+                            </view>
+                        </view>
+                        <view class="discuss flex-row">
+                            <!--回复操作-->
+                            <view class="reply-menu flex-row {{replyId==2?'':'dbn'}}">               
+                                <view class="flex-row"><image src="../images/icon_stop.png"></image><text>禁言</text></view>
+                                <view class="flex-row"><image src="../images/icon_reply.png"></image><text>回复</text></view>
+                                <view class="flex-row"><image src="../images/icon_delete.png"></image><text>删除</text></view>
+                            </view>
+                            <!--评论操作-->
+                            <view bindtap="replyMenu" menuState="{{menuState}}" data-reply-id="2"><image src="../images/icon_discuss.png"></image></view>
+                        </view>
+                        <view class="line"></view>
+
+                        <view class="table-item flex-row">
+                            <view class="hd-bg">
+                                <image src="../images/header_img.jpg"></image>
+                            </view>
+                            <view class="item-cont flex-column">
+                                <view class="flex-row hd-cont"><text>散户哨兵</text><text>15:38</text></view>
+                                <text class="cont">飘然而至说：宁波银行怎么操作，老师“小目标”方法哪家强？A股减持赛蓝翔。受到和管理层对减</text>
+                            </view>
+                        </view>
+                        <view class="discuss flex-row">
+                            <!--回复操作-->
+                            <view class="reply-menu flex-row {{replyId==0?'':'dbn'}}">               
+                                <view class="flex-row"><image src="../images/icon_stop.png"></image><text>禁言</text></view>
+                                <view class="flex-row"><image src="../images/icon_reply.png"></image><text>回复</text></view>
+                                <view class="flex-row" bindtap="replyDel" data-reply-id="0"><image src="../images/icon_delete.png"></image><text>删除</text></view>
+                            </view>
+                            <!--评论操作-->
+                            <view bindtap="replyMenu" data-menu-state="{{menuState}}" data-reply-id="0"><image src="../images/icon_discuss.png"></image></view>
+                        </view>
+                        <view class="line"></view>
+                    </view>
+                    <view class="refesh" hidden="{{loadMore==false}}" >下拉加载</view>               
+                </scroll-view>
+                <!--评论框-->
+                <view class="comment-box flex-row" >
+                    <view><image src="../images/emotiona.png"></image></view>
+                    <view><input bindinput="interactive" type="text" placeholder="互动起来吧" /></view>
+                    <button bindtap="sendInteract" hover-class="hover-bg" formType="submit">发送</button>
+                </view>
+            </view>
+        </swiper-item>
+        <!--团队老师及喊单-->
+        <swiper-item>
+            <view class="view-item flex-column">
+                <scroll-view class="view-area {{user==0? '':'dbn'}}" scroll-y="true">
+                    <!--团队老师-->
+                    <view class="table-view flex-column team">
+                        <view class="th-person"><text>老师介绍</text><text>(5)</text></view>
+                        <view class="table-item">
+                            <view class="flex-column team-cont">
+                                <view class="flex-row introduce">
+                                    <view><image src="../images/header_img.jpg"></image></view>
+                                    <view class="flex-column">
+                                        <text class="th-name">散户哨兵股民</text>
+                                        <text>金牌导师</text>
+                                        <navigator url="../setting/letter-detail/letter-detail"><text class="letter">私信</text></navigator>
+                                    </view>
+                                </view>
+                                <view class="cont">擅长挖掘中线趋势大牛股， 10多年的实盘经验。趋势为先，热点为王，短线只做超级强势股！有题材，是热点坚定选择！不知不觉就深深的爱上了股票，这一生最大的幸福就是钻研股票。</view>
+                            </view>
+                        </view>
+                        <view class="table-item">
+                            <view class="flex-column team-cont">
+                                <view class="flex-row introduce">
+                                    <view><image src="../images/header_img.jpg"></image></view>
+                                    <view class="flex-column">
+                                        <text>散户哨兵</text>
+                                        <text>金牌导师</text>
+                                        <navigator url="../setting/letter-detail/letter-detail"><text class="letter">私信</text></navigator>
+                                    </view>
+                                </view>
+                                <view class="cont">擅长挖掘中线趋势大牛股， 10多年的实盘经验。趋势为先，热点为王，短线只做超级强势股！有题材，是热点坚定选择！不知不觉就深深的爱上了股票，这一生最大的幸福就是钻研股票。</view>
+                            </view>
+                        </view>
+                        <view class="table-item">
+                            <view class="flex-column team-cont">
+                                <view class="flex-row introduce">
+                                    <view><image src="../images/header_img.jpg"></image></view>
+                                    <view class="flex-column">
+                                        <text>散户哨兵</text>
+                                        <text>金牌导师</text>
+                                        <navigator url="../setting/letter-detail/letter-detail"><text class="letter">私信</text></navigator>
+                                    </view>
+                                </view>
+                                <view class="cont">擅长挖掘中线趋势大牛股， 10多年的实盘经验。趋势为先，热点为王，短线只做超级强势股！有题材，是热点坚定选择！不知不觉就深深的爱上了股票，这一生最大的幸福就是钻研股票。</view>
+                            </view>
+                        </view>
+                    </view>    
+                </scroll-view>
+                <!--喊单-->
+                <view class="table-view flex-column single {{user==0? 'dbn':''}}">
+                    <form>
+                        <view class="flex-row single-list">
+                            <text>品种：</text>
+                            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                                <view class="picker">
+                                    <view class="select">{{array[index]}}</view>
+                                </view>
+                            </picker> 
+                        </view>
+                        <view class="flex-row single-list">
+                            <text>买入卖出：</text>
+                            <picker bindchange="bindPickerChangeA" value="{{indexa}}" range="{{deal}}">
+                                <view class="picker">
+                                    <view class="select">{{deal[indexa]}}</view>
+                                </view>
+                            </picker> 
+                            <!--<view class="select">买入建仓</view>-->
+                        </view>
+                        <view class="flex-row single-list">
+                            <text>委托类型：</text>
+                            <view class="select"><input placeholder="市价" /></view>
+                        </view>
+                        <view class="flex-row single-list">
+                            <text>点位：</text>
+                            <view class="select"><input type="number" placeholder="777" /></view>
+                        </view>
+                        <view class="flex-row single-list">
+                            <text>仓位：</text>
+                            <view class="select"><input type="number" placeholder="" /></view>
+                        </view>
+                        <view class="flex-row single-list">
+                            <text>止盈：</text>
+                            <view class="select"><input type="number" placeholder="" /></view>
+                        </view>
+                        <view class="flex-row single-list">
+                            <text>止损：</text>
+                            <view class="select"><input type="number" placeholder="" /></view>
+                        </view>
+                        <view class="flex-row single-list">
+                            <text>备注：</text>
+                            <view class="select"><input placeholder="" /></view>
+                        </view>
+                        
+                    </form>
+                </view>
+                <view class="btn-area {{user==0? 'dbn':''}}" ><button hover-class="hover-bg" formType="submit">喊单发布</button></view>
+            </view>
+        </swiper-item>
+        <!--往期回顾-->
+        <swiper-item>
+            <view class="view-item">     
+                <view class="history-tab flex-row">
+                    <view class="{{curTab==0?'cur':''}}" data-cur="0" bindtap="handOver">历史视频</view>
+                    <view class="{{curTab==1?'cur':''}}" data-cur="1" bindtap="handOver">历史观点</view>
+                </view>
+                <view class="history-box" style="height:{{switchState==false?winHeight-89:winHeight-89-190*winWidth/375}}px">
+                    <!--历史视频-->
+                    <view class="history-item {{curTab==0?'':'dbn'}}">
+                        <scroll-view scroll-y="true">
+                            <view class="item-table">
+                                <view class="item-td flex-column {{playId==0?'played':''}}" data-play-id='0' bindtap="playTab">
+                                    <view>信号一：新股发行“火力全开”</view>
+                                    <view>2017-01-20</view>
+                                    <view class="play-icon"><image src="../images/history_icon.png"></image></view>
+                                </view>
+                                <view class="item-td flex-column {{playId==1?'played':''}}" data-play-id='1' bindtap="playTab">
+                                    <view>信号一：新股发行“火力全开”</view>
+                                    <view>2017-01-20</view>
+                                    <view class="play-icon"><image src="../images/history_icon.png"></image></view>
+                                </view>
+                                <view class="item-td flex-column {{playId==2?'played':''}}" data-play-id='2' bindtap="playTab">
+                                    <view>信号一：新股发行“火力全开”</view>
+                                    <view>2017-01-20</view>
+                                    <view class="play-icon"><image src="../images/history_icon.png"></image></view>
+                                </view>
+                                <view class="item-td flex-column {{playId==3?'played':''}}" data-play-id='3' bindtap="playTab">
+                                    <view>信号一：新股发行“火力全开”</view>
+                                    <view>2017-01-20</view>
+                                    <view class="play-icon"><image src="../images/history_icon.png"></image></view>
+                                </view>
+                                <view class="item-td flex-column {{playId==4?'played':''}}" data-play-id='4' bindtap="playTab">
+                                    <view>信号一：新股发行“火力全开”</view>
+                                    <view>2017-01-20</view>
+                                    <view class="play-icon"><image src="../images/history_icon.png"></image></view>
+                                </view>
+                                <view class="item-td flex-column {{playId==5?'played':''}}" data-play-id='5' bindtap="playTab">
+                                    <view>信号一：新股发行“火力全开”</view>
+                                    <view>2017-01-20</view>
+                                    <view class="play-icon"><image src="../images/history_icon.png"></image></view>
+                                </view>
+                                <view class="item-td flex-column {{playId==6?'played':''}}" data-play-id='6' bindtap="playTab">
+                                    <view>信号一：新股发行“火力全开”</view>
+                                    <view>2017-01-20</view>
+                                    <view class="play-icon"><image src="../images/history_icon.png"></image></view>
+                                </view>
+                                <view class="item-td flex-column {{playId==7?'played':''}}" data-play-id='7' bindtap="playTab">
+                                    <view>信号一：新股发行“火力全开”</view>
+                                    <view>2017-01-20</view>
+                                    <view class="play-icon"><image src="../images/history_icon.png"></image></view>
+                                </view>
+                                <view class="item-td flex-column {{playId==8?'played':''}}" data-play-id='8' bindtap="playTab">
+                                    <view>信号一：新股发行“火力全开”</view>
+                                    <view>2017-01-20</view>
+                                    <view class="play-icon"><image src="../images/history_icon.png"></image></view>
+                                </view>
+                            </view>
+                        </scroll-view>
+                    </view>
+                    <!--历史观点-->
+                    <view class="history-item {{curTab==1?'':'dbn'}}">
+                        <scroll-view scroll-y="true">
+                            <view class="table-view viewpoint">
+                                <view class="table-item flex-column">       
+                                    <view class="item-cont flex-row">
+                                        <view>
+                                            <image src="../images/header_img.jpg"></image>
+                                        </view>
+                                        <view class="flex-row hd-cont"><text>散户哨兵</text><text>15:38</text></view>               
+                                    </view>
+                                    <view class="cont">飘然而至说：宁波银行怎么操作，老师小目标”方法哪家强？A股减持赛蓝翔。受到和管理层对减革将在2017年进入“突破”阶段，国企混改.</view>
+                                </view>
+
+                                <view class="table-item flex-column">       
+                                    <view class="item-cont flex-row">
+                                        <view>
+                                            <image src="../images/header_img.jpg"></image>
+                                        </view>
+                                        <view class="flex-row hd-cont"><text>散户哨兵</text><text>15:38</text></view>               
+                                    </view>
+                                    <view class="cont">
+                                        <view class="text-table flex-column">
+                                            <view>奥氏黄檀</view>
+                                            <view class="flex-row">
+                                                <view class="flex-row"><text>买入卖出</text><text class="color-green">卖出建仓</text></view>
+                                                <view class="flex-row"><text>止盈</text><text>756</text></view>
+                                            </view>
+                                            <view class="flex-row">
+                                                <view class="flex-row"><text>委托类型</text><text>市价</text></view>
+                                                <view class="flex-row"><text>止损</text><text>756</text></view>
+                                            </view>
+                                            <view class="flex-row">
+                                                <view class="flex-row"><text>点位</text><text>市价</text></view>
+                                                <view class="flex-row"><text>备注</text><text>空单</text></view>
+                                            </view>
+                                            <view class="flex-row">
+                                                <view class="flex-row"><text>仓位</text><text>市价</text></view>
+                                                <view class="flex-row"><text>平仓详情</text><text>查看平仓</text></view>
+                                            </view>
+                                        </view>
+                                    </view>
+                                </view> 
+
+                                <view class="table-item flex-column">       
+                                    <view class="item-cont flex-row">
+                                        <view>
+                                            <image src="../images/header_img.jpg"></image>
+                                        </view>
+                                        <view class="flex-row hd-cont"><text>散户哨兵</text><text>15:38</text></view>               
+                                    </view>
+                                    <view class="cont">飘然而至说：宁波银行怎么操作，老师小目标”方法哪家强？A股减持赛蓝翔。受到和管理层对减革将在2017年进入“突破”阶段，国企混改.</view>
+                                </view>
+                            </view>
+                        </scroll-view>
+                    </view>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>

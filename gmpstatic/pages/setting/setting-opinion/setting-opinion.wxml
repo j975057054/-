@@ -1,0 +1,8 @@
+<view class="container">
+    <form>
+        <textarea bindinput="textValue" placeholder="请输入您的反馈与建议" />
+        <view class="btn-area">
+            <button bindtap="createPoint" hover-class="hover-bg" formType="submit">提交</button>
+        </view>
+    </form>
+</view>

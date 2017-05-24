@@ -1,0 +1,100 @@
+.container{padding: 15px 12px;}
+.creat-cont{
+    background-color: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 12px;
+}
+.creat-title,.charge{
+    align-items: center;
+    height: 43px;
+}
+.creat-title>text,.charge>text{color:#b3b3b3;}
+.creat-title>text.change,.charge>text.change{color:#999;}
+.creat-title{border-bottom: 1px solid #e9e9e9;}
+.creat-title input{width: 500rpx;padding-left: 10px;font-size: 15px;color:#333;}
+.charge{justify-content: space-between;}
+.switch{width: 10px;height: 10px;}
+textarea{
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 9px 10px;
+    width: auto;
+    border: 1px solid #e9e9e9;
+}
+.textarea-placeholder{color:#b3b3b3}
+.btn-area{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+}
+.btn-area button{
+    color: #fff;
+    font-size: 17px;
+    background-color: #d33d3e;
+    border-radius:0;
+    border: none;
+    line-height: 43px;
+    margin-top: 20px;
+}
+.btn-area .hover-bg{
+    background-color: #bf2526;
+    color: #fed9d9;
+}
+
+.switch-custom{height:25px;}
+.btnOutside{
+    display: inline-block;
+    width:45px;
+    height: 25px;
+    border-radius: 25px;
+    border:1px solid #d1d0d0;
+    box-sizing: border-box;
+    position: relative;
+    animation:leftOut 0.2s linear;
+    background-color: #d1d0d0;
+}
+.btnInside{
+    width:24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    border:1px solid #d1d0d0;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    animation:leftIn 0.2s linear;
+}
+.rightOut .btnInside{
+    border:1px solid #d33d3e;
+    left:20px;
+    animation:rightIn 0.2s linear;
+}
+.rightOut{
+    border:1px solid #d33d3e;
+    background-color: #d33d3e;
+    animation:rightOut 0.2s linear;
+}
+@keyframes rightIn{
+    from{border:1px solid #D0D0D0;
+    left:-1px;}
+    to{border:1px solid #d33d3e;
+    left:20px;}
+}
+@keyframes leftIn{
+    from{border:1px solid #d33d3e;
+    left:20px;}
+    to{border:1px solid #D0D0D0;
+    left:-1px;}
+}
+@keyframes rightOut{
+    from{background-color: #fff;}
+    to{background-color: #d33d3e;}
+}
+@keyframes leftOut{
+    from{background-color: #d33d3e;}
+    to{background-color: #fff;}
+}
